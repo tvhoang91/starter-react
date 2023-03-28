@@ -1,9 +1,9 @@
-import { Typography } from 'antd'
+import { Typography } from 'antd';
 
-const { Title } = Typography
+const { Title } = Typography;
 
 function Settings() {
-  return <Title>Settings</Title>
+  return <Title>Settings</Title>;
 }
 
-export default Settings
+export default Settings;
