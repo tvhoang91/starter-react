@@ -2,7 +2,7 @@ import { Typography } from 'antd';
 
 const { Title } = Typography;
 
-function Settings() {
+function Settings()      {
   return <Title>Settings</Title>;
 }
 
