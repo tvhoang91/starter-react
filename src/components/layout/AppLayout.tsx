@@ -7,7 +7,7 @@ const { Content } = Layout;
 
 function AppLayout() {
   return (
-    <Layout>
+    <Layout className="h-screen">
       <AppHeader />
       <Content>
         <Outlet />
