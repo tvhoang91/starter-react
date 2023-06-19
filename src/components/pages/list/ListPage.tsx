@@ -9,7 +9,7 @@ const { Title } = Typography;
 function ListPage() {
   return (
     <PageContainer>
-      <div className="grid h-full w-full grid-cols-2 gap-2">
+      <div className="grid h-full w-full grid-cols-2 gap-6">
         <div className="overflow-auto">
           <Title level={5} className="text-center">
             Folder List

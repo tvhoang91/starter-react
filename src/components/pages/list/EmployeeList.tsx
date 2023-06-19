@@ -1,10 +1,9 @@
+import { useEmployeeStore } from '@src/stores/employeeStore';
 import { Avatar, List } from 'antd';
 
-import { generateEmployees } from './employee.data';
-
-const data = generateEmployees(6);
-
 function EmployeeList() {
+  const data = useEmployeeStore((s) => s.items);
+
   return (
     <List
       itemLayout="horizontal"

@@ -1,10 +1,9 @@
+import { useProductStore } from '@src/stores/productStore';
 import { Avatar, List } from 'antd';
 
-import { generateProducts } from './product.data';
-
-const data = generateProducts(7);
-
 function ProductList() {
+  const data = useProductStore((s) => s.items);
+
   return (
     <List
       itemLayout="horizontal"

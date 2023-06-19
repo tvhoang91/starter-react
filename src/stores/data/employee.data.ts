@@ -1,14 +1,5 @@
-import { faker, SexType } from '@faker-js/faker';
-
-export interface Employee {
-  id: string;
-  title: string;
-
-  avatar: string;
-  bio: string;
-
-  sex: SexType;
-}
+import { faker } from '@faker-js/faker';
+import { Employee } from '@src/types/employee.type';
 
 export function generateEmployees(count = 5): Employee[] {
   const employees: Employee[] = [];
@@ -21,6 +12,7 @@ export function generateEmployees(count = 5): Employee[] {
       avatar: faker.image.avatar(),
       sex: sex,
       bio: faker.person.bio(),
+      isOnline: faker.datatype.boolean(),
     });
   }
 

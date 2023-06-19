@@ -1,14 +1,5 @@
 import { faker } from '@faker-js/faker';
-
-export interface Product {
-  id: string;
-  title: string;
-
-  thumbnail: string;
-  description: string;
-
-  outOfStock: boolean;
-}
+import { Product } from '@src/types/product.type';
 
 export function generateProducts(count = 5): Product[] {
   const products: Product[] = [];
