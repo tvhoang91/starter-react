@@ -3,7 +3,12 @@ import { Typography } from 'antd';
 const { Title } = Typography;
 
 function Home() {
-  return <Title>Home</Title>;
+  return (
+    <>
+      <Title className="text-center">Home</Title>
+      <button className="btn">Click me</button>
+    </>
+  );
 }
 
 export default Home;
