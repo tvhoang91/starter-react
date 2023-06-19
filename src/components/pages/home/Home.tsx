@@ -20,7 +20,7 @@ function Home() {
 
   return (
     <PageContainer>
-      <Title level={2} className="text-center">
+      <Title level={4} className="text-center">
         Demo Style Manipulate
       </Title>
 

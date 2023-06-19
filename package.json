@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.1.4",
+    "@faker-js/faker": "^8.0.2",
     "antd": "^5.3.2",
     "clsx": "^1.2.1",
     "ky": "^0.33.3",

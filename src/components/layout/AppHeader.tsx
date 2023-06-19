@@ -26,6 +26,10 @@ function AppHeader() {
             key: 'settings',
             label: <Link to="settings">Settings</Link>,
           },
+          {
+            key: 'tree',
+            label: <Link to="tree">Tree</Link>,
+          },
         ]}
       />
     </Header>

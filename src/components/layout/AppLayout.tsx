@@ -9,7 +9,7 @@ function AppLayout() {
   return (
     <Layout className="h-screen">
       <AppHeader />
-      <Content className="bg-slate-100 px-4 py-6">
+      <Content className="bg-slate-200 px-4 py-6">
         <Outlet />
       </Content>
     </Layout>
