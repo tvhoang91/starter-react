@@ -1,0 +1,7 @@
+.homeSteps {
+  :global .ant-steps-item:not(.ant-steps-item-wait) {
+    .ant-steps-item-title {
+      @apply text-red-400 !important;
+    }
+  }
+}

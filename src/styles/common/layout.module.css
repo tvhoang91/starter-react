@@ -1,0 +1,3 @@
+.pageContainer {
+  @apply h-full rounded bg-white;
+}

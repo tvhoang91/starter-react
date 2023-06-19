@@ -1,0 +1,4 @@
+.btn {
+  @apply rounded bg-emerald-400 px-4 py-2 text-white;
+  @apply hover:bg-emerald-500;
+}
