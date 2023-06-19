@@ -21,7 +21,7 @@ function Home() {
   return (
     <PageContainer>
       <Title level={4} className="text-center">
-        Demo Style Manipulate
+        Style Manipulation
       </Title>
 
       <ConfigProvider

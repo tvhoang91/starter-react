@@ -6,19 +6,19 @@ import ProductList from './ProductList';
 
 const { Title } = Typography;
 
-function TreePage() {
+function ListPage() {
   return (
     <PageContainer>
       <div className="grid h-full w-full grid-cols-2 gap-2">
         <div className="overflow-auto">
           <Title level={5} className="text-center">
-            Folder Tree
+            Folder List
           </Title>
           <ProductList />
         </div>
         <div className="overflow-auto">
           <Title level={5} className="text-center">
-            Employee Tree
+            Employee List
           </Title>
           <EmployeeList />
         </div>
@@ -27,4 +27,4 @@ function TreePage() {
   );
 }
 
-export default TreePage;
+export default ListPage;

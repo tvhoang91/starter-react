@@ -9,12 +9,12 @@ function EmployeeList() {
     <List
       itemLayout="horizontal"
       dataSource={data}
-      renderItem={(item) => (
-        <List.Item>
+      renderItem={(employee) => (
+        <List.Item key={employee.id}>
           <List.Item.Meta
-            avatar={<Avatar src={item.avatar} />}
-            title={item.title}
-            description={item.bio}
+            avatar={<Avatar src={employee.avatar} />}
+            title={employee.title}
+            description={employee.bio}
           />
         </List.Item>
       )}

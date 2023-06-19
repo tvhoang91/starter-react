@@ -9,12 +9,12 @@ function ProductList() {
     <List
       itemLayout="horizontal"
       dataSource={data}
-      renderItem={(item, index) => (
-        <List.Item>
+      renderItem={(product) => (
+        <List.Item key={product.id}>
           <List.Item.Meta
-            avatar={<Avatar src={item.thumbnail} />}
-            title={item.title}
-            description={item.description}
+            avatar={<Avatar src={product.thumbnail} />}
+            title={product.title}
+            description={product.description}
           />
         </List.Item>
       )}
