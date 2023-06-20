@@ -1,3 +1,5 @@
+import './Home.scss';
+
 import PageContainer from '@src/components/layout/PageContainer';
 import { ConfigProvider, Typography } from 'antd';
 import clsx from 'clsx';
@@ -37,6 +39,8 @@ function Home() {
       </ConfigProvider>
 
       <DemoSteps className={`flex-1 ${classes.homeSteps}`} />
+
+      <DemoSteps className="my-steps" />
 
       <button
         className={clsx('btn flex-none', {
