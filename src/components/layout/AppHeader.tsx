@@ -26,6 +26,10 @@ function AppHeader() {
             key: 'list',
             label: <Link to="list">List</Link>,
           },
+          {
+            key: 'twin',
+            label: <Link to="twin">Twin</Link>,
+          },
         ]}
       />
     </Header>

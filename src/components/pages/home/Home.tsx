@@ -43,9 +43,10 @@ function Home() {
       <DemoSteps className="my-steps" />
 
       <button
-        className={clsx('btn flex-none', {
-          'border-white outline outline-1 outline-offset-2 outline-emerald-600': isHightlighted,
-        })}
+        className={clsx(
+          'btn flex-none',
+          isHightlighted && 'border-white outline outline-1 outline-offset-2 outline-emerald-600',
+        )}
         onClick={() => setIsHightlighted((bool) => !bool)}
       >
         Click me
