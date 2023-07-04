@@ -33,17 +33,18 @@ const items: MenuItem[] = [
   ]),
   getItem('Team', 'sub2', <TeamOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
   getItem('Files', '9', <FileOutlined />),
-  getItem('Files', '9', <FileOutlined />),
-  getItem('Files', '9', <FileOutlined />),
-  getItem('Files', '9', <FileOutlined />),
-  getItem('Files', '9', <FileOutlined />),
 ];
 
 const scrollbarStyle = css`
   scrollbar-width: thin;
+  scrollbar-color: #94a3b8;
 
   &::-webkit-scrollbar {
-    width: 2px;
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: #94a3b8;
   }
 `;
 
@@ -55,7 +56,7 @@ function AdminLayout() {
           <h2 className="text-xl font-bold text-white">LOGO</h2>
         </div>
         <Menu
-          className="overflow-auto py-3"
+          className="overflow-auto overscroll-none py-3"
           css={scrollbarStyle}
           theme="dark"
           defaultSelectedKeys={['1']}
@@ -63,11 +64,11 @@ function AdminLayout() {
           items={items}
         />
       </Sider>
-      <Layout className="overflow-auto">
+      <Layout className="overflow-auto overscroll-none">
         <Header className="sticky top-0 z-10 h-16 bg-white shadow-md">Header</Header>
-        <Content className="p-6">
-          <div className="min-h-full rounded p-4">
-            <div className="grid grid-flow-col grid-rows-4 gap-4">
+        <Content>
+          <div className="min-h-full rounded p-6">
+            <div className="grid grid-cols-3 gap-4">
               {Array(10)
                 .fill(0)
                 .map((_, i) => i)
