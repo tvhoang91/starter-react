@@ -5,10 +5,14 @@ import {
   TeamOutlined,
   UserOutlined,
 } from '@ant-design/icons';
-import { Card, Layout, Menu, MenuProps } from 'antd';
+import { Layout, Menu, MenuProps, Segmented } from 'antd';
+import { useState } from 'react';
 import { css } from 'twin.macro';
 
-const { Content, Sider, Header } = Layout;
+import KanbanContent from './content/KanbanContent';
+import ListContent from './content/ListContent';
+
+const { Sider, Header } = Layout;
 type MenuItem = Required<MenuProps>['items'][number];
 function getItem(
   label: React.ReactNode,
@@ -48,7 +52,11 @@ const scrollbarStyle = css`
   }
 `;
 
+type LayoutMode = 'List' | 'Kanban';
+
 function AdminLayout() {
+  const [layoutMode, setLayoutMode] = useState<LayoutMode>('List');
+
   return (
     <Layout className="h-screen">
       <Sider collapsible tw="[.ant-layout-sider-children]:(flex flex-col)">
@@ -64,24 +72,27 @@ function AdminLayout() {
           items={items}
         />
       </Sider>
-      <Layout className="overflow-auto overscroll-none">
-        <Header className="sticky top-0 z-10 h-16 bg-white shadow-md">Header</Header>
-        <Content>
-          <div className="min-h-full rounded p-6">
-            <div className="grid grid-cols-3 gap-4">
-              {Array(10)
-                .fill(0)
-                .map((_, i) => i)
-                .map((i) => (
-                  <Card key={i} title="Card title" bordered={false}>
-                    <p>Card content</p>
-                    <p>Card content</p>
-                    <p>Card content</p>
-                  </Card>
-                ))}
-            </div>
-          </div>
-        </Content>
+      <Layout className="flex h-full">
+        <Header className="z-10 h-16 flex-none bg-white shadow-md">Header</Header>
+
+        <Segmented
+          value={layoutMode}
+          onChange={(value) => setLayoutMode(value as LayoutMode)}
+          className="mx-6 mt-6 flex-none self-start bg-violet-300"
+          options={[
+            {
+              label: 'List',
+              value: 'List',
+            },
+            {
+              label: 'Kanban',
+              value: 'Kanban',
+            },
+          ]}
+        />
+
+        {layoutMode === 'List' && <ListContent />}
+        {layoutMode === 'Kanban' && <KanbanContent />}
       </Layout>
     </Layout>
   );
